@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<div class="player1">
+  <h2>Player 2</h2>
+  <form method="post">
+    <input type="text" name="name" placeholder="Name...">
+    <button value="rock" formaction="/{{ result1 }}/rock">Rock</button>
+    <button value="paper" formaction="/{{ result1 }}/paper">Paper</button>
+    <button value="scissors" formaction="/{{ result1 }}/scissors">Scissors</button>
+  </form>
+</div>
+{% endblock %}
