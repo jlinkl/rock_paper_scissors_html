@@ -1,4 +1,5 @@
 from models.player import Player
+import random
 
 def find_winner(player1, player2):
     if player1.choice == player2.choice:
@@ -11,3 +12,6 @@ def find_winner(player1, player2):
         return player1.name
     else:
         return player2.name
+
+def computer():
+    return random.choice(['rock', 'paper', 'scissors'])
