@@ -1,8 +1,12 @@
 {% extends 'base.html' %} {% block content %}
+<div>
 <h1>The winner is {{ winner }}</h1>
 {% if winner == first.name %}
     <p>{{ first.name }} played {{ first.choice }} to beat {{ second.name }}, who played {{ second.choice }}.</p>
-{% else %}
+{% elif winner == second.name %}
     <p>{{ second.name }} played {{ second.choice }} to beat {{ first.name }}, who played {{ first.choice }}.</p>
+{% else %}
+    <p>Both {{ first.name }} and {{ second.name }} played {{ first.choice }} and tied.</p>
 {% endif %}
+</div>
 {% endblock %}
